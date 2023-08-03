@@ -1,0 +1,31 @@
+.program__container {
+  margin: 0 20px 20px;
+
+  background-color: $basic-gray;
+}
+
+.program__title {
+  padding-bottom: 29px;
+
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+}
+
+.program__content {
+  padding: 0;
+  padding-bottom: 23px;
+
+  font-family: "Lato", sans-serif;
+  color: $dark-contet;
+}
+
+.program__link {
+  padding-right: 48px;
+
+  font-size: 16px;
+  line-height: 16px;
+  color: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+}

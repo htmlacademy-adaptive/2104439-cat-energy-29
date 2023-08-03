@@ -1,0 +1,34 @@
+.more__item-title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: $dark-contet;
+  text-transform: uppercase;
+}
+
+.more__pack {
+  font-family: "Lato";
+  color: $dark-contet;
+}
+
+.more__price {
+  font-family: "Lato";
+  color: $dark-contet;
+}
+
+.more__offer {
+  padding: 172px 20px 26px;
+
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Lato";
+  color: $light;
+
+  background-image: linear-gradient(
+      to top,
+      rgba(104, 183, 56, 0.85),
+      rgba(104, 183, 56, 0.85)
+    ),
+    url("../img/more-background.jpg");
+  background-repeat: no-repeat;
+}
