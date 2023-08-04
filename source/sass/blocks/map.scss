@@ -1,7 +1,9 @@
+.map--home .map__container {
+  background-color: $light;
+}
+
 .map__contact {
   position: relative;
-
-  background-color: $light;
 }
 
 .map__title {
@@ -16,6 +18,22 @@
   font-style: normal;
   font-size: 14px;
   line-height: 20px;
-  font-family: "Lato", sans-serif;
+  font-family: $ff-lato;
   color: $dark-contet;
+}
+
+.map__iframe-container {
+  height: 400px;
+}
+
+.map__iframe {
+  height: 100%;
+}
+
+.map__iframe iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  border: none;
 }

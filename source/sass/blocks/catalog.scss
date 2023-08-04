@@ -4,12 +4,19 @@
   line-height: 20px;
   color: $dark-contet;
   text-transform: uppercase;
+}
+
+.catalog__title-link {
   text-decoration: none;
 }
 
 .catalog__description {
   font-size: 12px;
   line-height: 15px;
-  font-family: "Lato", sans-serif;
+  font-family: $ff-lato;
   color: $dark-contet;
+}
+
+.catalog__description-item dd {
+  margin: 0;
 }
