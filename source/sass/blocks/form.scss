@@ -1,0 +1,30 @@
+.form__fieldset {
+  margin: 0 auto;
+
+  border: none;
+}
+
+.form__label {
+  font-size: 16px;
+  line-height: 18px;
+  font-family: $ff-oswald;
+  color: $dark-contet;
+  text-transform: uppercase;
+}
+
+.form__input {
+  padding: 11px 20px;
+
+  font-size: 16px;
+  line-height: 18px;
+  font-family: $ff-oswald;
+  color: $dark-contet;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  border: 1px solid $gray-border;
+}
+
+.form__legend {
+  margin-bottom: 34px;
+}

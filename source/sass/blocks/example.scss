@@ -1,0 +1,27 @@
+.example {
+  background-color: #f2f2f2;
+}
+
+.example__content {
+  padding-bottom: 26px;
+
+  font-family: $ff-lato;
+  color: $dark-contet;
+}
+
+.example__term {
+  font-size: 12px;
+  line-height: 12px;
+  font-family: $ff-lato;
+  color: $dark-contet;
+}
+
+.example__definition {
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.example__prise {
+  line-height: 20px;
+  text-transform: uppercase;
+}
