@@ -1,9 +1,39 @@
+.more__item {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: $desktop-width) {
+  .more__catalog-container {
+    display: grid;
+
+    gap: 0 80px;
+    grid-template-columns: 1fr auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .more__item {
+    display: grid;
+    align-items: baseline;
+
+    grid-template-columns: 1fr 220px 60px 244px;
+  }
+}
+
+.more__button {
+  grid-column: 1 / -1;
+}
+
 .more__item-title {
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
   color: $dark-contet;
   text-transform: uppercase;
+
+  grid-column: 1 / -1;
 }
 
 .more__pack {
@@ -31,4 +61,10 @@
     ),
     url("../img/more-background.jpg");
   background-repeat: no-repeat;
+}
+
+@media (min-width: $desktop-width) {
+  .more__offer {
+    width: 245px;
+  }
 }

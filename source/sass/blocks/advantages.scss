@@ -2,6 +2,24 @@
   padding-bottom: 40px;
 }
 
+@media (min-width: $tablet-width) {
+  .advantages__list {
+    display: grid;
+
+    gap: 37px 136px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages__list {
+    display: grid;
+
+    gap: 77px 77px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .advantages__item {
   padding-bottom: 26px;
 

@@ -1,3 +1,30 @@
 .main-footer {
   background-color: $basic-gray;
 }
+
+@media (min-width: $tablet-width) {
+  .main-footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.main-footer__logo {
+  display: block;
+  margin: 0 auto;
+}
+
+.main-footer__developer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: $tablet-width) {
+  .main-footer__developer {
+    width: 168px;
+  }
+}

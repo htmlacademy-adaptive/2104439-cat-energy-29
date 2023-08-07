@@ -1,7 +1,42 @@
+@media (min-width: $desktop-width) {
+  .form__container {
+    display: grid;
+
+    gap: 0 80px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .form__fieldset {
   margin: 0 auto;
 
   border: none;
+}
+
+@media (min-width: $tablet-width) {
+  .form__fieldset--submit {
+    display: grid;
+    align-items: center;
+
+    gap: 20px 65px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.form__group {
+  display: grid;
+
+  gap: 14px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: $desktop-width) {
+  .form__group {
+    display: grid;
+
+    gap: 0 80px;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .form__label {
