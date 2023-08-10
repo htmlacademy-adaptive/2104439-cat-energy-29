@@ -6,5 +6,3 @@ if (navBtn) {
     nav.classList.toggle('is-open');
   })
 }
-
-
