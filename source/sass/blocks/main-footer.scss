@@ -1,9 +1,9 @@
 .main-footer {
-  background-color: $basic-gray;
+  background-color: $color-basic;
 }
 
-@media (min-width: $tablet-width) {
-  .main-footer__container {
+.main-footer__container {
+  @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -11,20 +11,23 @@
   }
 }
 
+.main-footer__logo-link {
+  display: block;
+  width: 128px;
+}
+
 .main-footer__logo {
   display: block;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .main-footer__developer {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-}
 
-@media (min-width: $tablet-width) {
-  .main-footer__developer {
+  @media (min-width: $tablet-width) {
+    align-items: center;
     width: 168px;
   }
 }

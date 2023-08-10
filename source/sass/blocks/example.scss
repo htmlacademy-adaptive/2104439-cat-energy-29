@@ -1,25 +1,27 @@
 .example {
-  background-color: $basic-gray;
-}
+  background-color: $color-background;
 
-@media (min-width: $tablet-width) {
-  .example {
-    background-color: $light;
+  @media (min-width: $tablet-width) {
+    background-image: linear-gradient(
+      0deg,
+      $color-background 42.5%,
+      $light 42.9%
+    );
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $color-basic;
+    background-image: linear-gradient(0deg, $color-basic 77%, $light 77%);
   }
 }
 
-@media (min-width: $desktop-width) {
-  .example {
-    background-color: $light;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .example__container {
+.example__container {
+  @media (min-width: $desktop-width) {
     display: grid;
+    align-items: start;
 
     gap: 10px 220px;
-    grid-template-columns: 1fr 560px;
+    grid-template-columns: 436px 1fr;
   }
 }
 
@@ -31,26 +33,28 @@
 }
 
 .example__list-wrapper {
-  display: grid;
-
-  gap: 20px 32px;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-@media (min-width: $tablet-width) {
-  .example__list-wrapper {
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    display: grid;
     align-items: center;
 
     gap: 33px;
-    grid-template-columns: 162px 162px 1fr;
+    grid-template-columns: repeat (2, auto);
+  }
+
+  @media (min-width: $desktop-width) {
   }
 }
 
-@media (min-width: $desktop-width) {
-  .example__list-wrapper {
+.example__list {
+  display: grid;
+
+  gap: 20px 32px;
+  grid-template-columns: repeat(2, 124px);
+
+  @media (min-width: $tablet-width) {
     align-items: center;
 
-    gap: 60px 42px;
+    gap: 33px;
     grid-template-columns: repeat(2, 162px);
   }
 }
@@ -68,8 +72,6 @@
 }
 
 .example__prise {
-  display: block;
-
   line-height: 20px;
   text-transform: uppercase;
 }

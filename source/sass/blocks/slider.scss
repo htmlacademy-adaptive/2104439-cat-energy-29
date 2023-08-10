@@ -1,3 +1,11 @@
 .slider {
-  padding: 0;
+  width: 280px;
+  height: 256px;
+  //Убрать overflow после стилизации слайдера
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+    height: 512px;
+  }
 }

@@ -6,3 +6,15 @@
   gap: 24px;
   grid-template-columns: repeat(3, auto);
 }
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 22px;
+
+  color: $color-icon;
+
+  fill: currentColor;
+}

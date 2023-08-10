@@ -3,23 +3,25 @@
 
   gap: 12px;
   grid-template-columns: 1fr;
-}
 
-@media (min-width: $desktop-width) {
-  .control {
-    display: grid;
+  &--radio {
+    @media (min-width: $tablet-width) {
+      padding: 24px 28px;
 
-    grid-template-columns: repeat(4, 1fr);
+      border: 1px solid $color-border;
+    }
   }
-}
 
-.form__submit {
-  width: 100%;
-}
+  &--check {
+    @media (min-width: $tablet-width) {
+      gap: 33px 57px;
+      grid-template-columns: repeat(2, 1fr);
+    }
 
-@media (min-width: $desktop-width) {
-  .form__submit {
-    min-width: 570px;
+    @media (min-width: $desktop-width) {
+      gap: 33px 78px;
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }
 
