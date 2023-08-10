@@ -1,9 +1,47 @@
+.more__catalog-container {
+  @media (min-width: $desktop-width) {
+    display: grid;
+
+    gap: 30px 80px;
+    grid-template-columns: 1fr auto;
+  }
+}
+
+.more__item {
+  display: grid;
+
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 150px 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 220px 60px 244px;
+  }
+}
+
+.more__button {
+  grid-column: 1 / -1;
+
+  @media (min-width: $desktop-width) {
+    grid-column: auto;
+  }
+}
+
 .more__item-title {
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
   color: $dark-contet;
   text-transform: uppercase;
+
+  grid-column: 1 / -1;
+
+  @media (min-width: $tablet-width) {
+    grid-column: auto;
+  }
 }
 
 .more__pack {
@@ -24,11 +62,28 @@
   font-family: $ff-lato;
   color: $light;
 
-  background-image: linear-gradient(
-      to top,
-      rgba(104, 183, 56, 0.85),
-      rgba(104, 183, 56, 0.85)
-    ),
-    url("../img/more-background.jpg");
+  background-image: url("../img/svg/icon-gift.svg"),
+    linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+    url("../img/more-background-mobile@1.jpg");
   background-repeat: no-repeat;
+  background-position: top 59px center, top, center;
+  background-size: 78px 80px, auto, cover;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/svg/icon-gift.svg"),
+      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      url("../img/more-background-tablet@1.jpg");
+    background-position: center left 80px, top, center;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+
+    text-align: center;
+
+    background-image: url("../img/svg/icon-gift.svg"),
+      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      url("../img/more-background-desktop@1.jpg");
+    background-position: top 59px center, top, top;
+  }
 }

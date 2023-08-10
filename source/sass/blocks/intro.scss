@@ -1,39 +1,108 @@
 .intro__container {
-  padding: 0;
+  position: relative;
+
+  @media (max-width: $mobile-width-only) {
+    padding: 0 0 30px;
+  }
+}
+
+.intro--home .intro__container {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 53px;
+  }
 }
 
 .intro__content {
-  text-align: center;
+  text-transform: uppercase;
 }
 
 .intro--home .intro__content {
+  padding: 27px 20px 150px;
+
+  text-align: center;
   color: $light;
 
-  background-color: $dark-green;
+  background-color: $color-main;
   background-image: linear-gradient(
       to top,
       rgba(104, 183, 56, 0.85),
       rgba(104, 183, 56, 0.85)
     ),
-    url("../img/intro-background.jpg");
+    url("../img/intro-background-mobile@1.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: auto, cover;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+    color: $dark;
+
+    background: none;
+  }
 }
 
 .intro__text {
   line-height: 14px;
-  color: $light;
-  text-transform: uppercase;
 }
 
 .intro__img {
   width: 280px;
   height: 270px;
+  /* margin: -130px auto 0; */
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    z-index: -1;
+
+    width: 100%;
+    max-width: 709px;
+    height: 609px;
+  }
+
+  @media (min-width: $desktop-width) {
+    z-index: auto;
+
+    width: 552px;
+    height: 499px;
+  }
 }
 
 .intro__img img {
   display: block;
   width: 100%;
   height: 100%;
+}
+
+.intro__button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 280px;
+  padding-top: 12px;
+  padding-bottom: 10px;
+
+  font-size: 14px;
+  line-height: 18px;
+
+  transform: translateX(-50%);
+
+  @media (min-width: $tablet-width) {
+    position: static;
+    /*  left: auto; */
+
+    width: 244px;
+    margin-left: 0;
+    padding: 17px 10px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    transform: none;
+  }
 }
