@@ -2,11 +2,20 @@
   position: relative;
 
   @media (max-width: $mobile-width-only) {
-    padding: 0 0 30px;
+    padding: 27px 20px 39px;
+
+    border-top: 1px solid $color-division;
+    border-bottom: 1px solid $color-division;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0 70px 66px;
   }
 }
 
 .intro--home .intro__container {
+  padding: 0;
+
   @media (min-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
@@ -14,7 +23,35 @@
   }
 }
 
+.intro__title {
+  margin-bottom: 37px;
+
+  line-height: 36px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.intro--home .intro__title {
+  padding: 0;
+}
+
 .intro__content {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+p.intro__content {
+  max-width: 323px;
+
   text-transform: uppercase;
 }
 
@@ -36,6 +73,8 @@
   background-size: auto, cover;
 
   @media (min-width: $tablet-width) {
+    padding: 60px 20px 10px 90px;
+
     text-align: left;
     color: $dark;
 
@@ -45,13 +84,18 @@
 
 .intro__text {
   line-height: 14px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .intro__img {
   width: 280px;
   height: 270px;
-  /* margin: -130px auto 0; */
-  margin: 0 auto;
+  margin: -130px auto 0;
 
   @media (min-width: $tablet-width) {
     position: relative;
@@ -60,6 +104,7 @@
     width: 100%;
     max-width: 709px;
     height: 609px;
+    margin-top: -90px;
   }
 
   @media (min-width: $desktop-width) {
@@ -84,6 +129,7 @@
 
   width: 100%;
   max-width: 280px;
+  margin-bottom: 20px;
   padding-top: 12px;
   padding-bottom: 10px;
 
@@ -94,9 +140,9 @@
 
   @media (min-width: $tablet-width) {
     position: static;
-    /*  left: auto; */
 
     width: 244px;
+    margin-top: 30px;
     margin-left: 0;
     padding: 17px 10px;
 

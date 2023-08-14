@@ -1,4 +1,44 @@
 .title-lines {
+  overflow: hidden;
+
+  font-weight: 400;
   font-size: 24px;
   line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.title-lines span {
+  display: inline-block;
+
+  vertical-align: middle;
+}
+
+.title-lines:before,
+.title-lines:after {
+  content: "";
+  position: relative;
+
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+
+  vertical-align: middle;
+
+  background-color: $color-main;
+}
+
+.title-lines:before {
+  left: -20px;
+
+  margin-left: -100%;
+}
+
+.title-lines:after {
+  right: -20px;
+
+  margin-right: -100%;
 }

@@ -1,4 +1,6 @@
 .program__list {
+  position: relative;
+
   @media (min-width: $desktop-width) {
     display: grid;
 
@@ -9,12 +11,50 @@
 
 .program__item {
   margin-bottom: 20px;
-  padding: 21px;
+  padding: 30px 33px 22px 20px;
 
   background-color: $color-basic;
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    padding: 77px 316px 57px 52px;
+  }
 
   @media (min-width: $desktop-width) {
     margin: 0;
+    padding: 77px 61px 59px 52px;
+  }
+}
+
+.program__item--slim {
+  background-image: url("../img/svg/cat-slim.svg");
+  background-position: 22px 21px;
+  background-size: 50px 53px;
+
+  @media (min-width: $tablet-width) {
+    background-position: top 81px right 63px;
+    background-size: 200px 211px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-position: 52px 41px;
+    background-size: 100px 106px;
+  }
+}
+
+.program__item--pro {
+  background-image: url("../img/svg/cat-pro.svg");
+  background-position: 13px 24px;
+  background-size: 67px 50px;
+
+  @media (min-width: $tablet-width) {
+    background-position: top 91px right 29px;
+    background-size: 268px 200px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-position: 47px 33px;
+    background-size: 134px 100px;
   }
 }
 
@@ -41,12 +81,24 @@
 
 .program__content {
   margin: 0 0 23px;
+  padding: 0 0 23px;
 
   font-family: $ff-lato;
   color: $dark-contet;
+
+  border-bottom: 1px solid $color-division;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+
+    border: none;
+  }
 }
 
 .program__link {
+  position: relative;
+
   padding-right: 48px;
 
   font-size: 16px;
@@ -54,4 +106,26 @@
   color: inherit;
   text-transform: uppercase;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: normal;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: 0;
+
+    width: 32px;
+    height: 10px;
+    margin-left: -5px;
+
+    background-image: url("../img/svg/icon-arrow.svg");
+
+    &:hover {
+      background-image: url("../img/svg/icon-arrow-hover.svg");
+    }
+  }
 }

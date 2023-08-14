@@ -30,6 +30,11 @@
 
   font-family: $ff-lato;
   color: $dark-contet;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .example__list-wrapper {
@@ -38,7 +43,7 @@
     align-items: center;
 
     gap: 33px;
-    grid-template-columns: repeat (2, auto);
+    grid-template-columns: repeat(2, auto);
   }
 
   @media (min-width: $desktop-width) {
@@ -60,19 +65,90 @@
   }
 }
 
+.example__item {
+  position: relative;
+
+  width: 124px;
+  min-height: 56px;
+
+  text-align: center;
+
+  border: 1px solid $color-frame;
+  border-radius: 3px;
+
+  @media (min-width: $tablet-width) {
+    width: 162px;
+    min-height: 77px;
+  }
+}
+
 .example__term {
+  position: absolute;
+  top: 46px;
+
+  align-items: center;
+  margin: 0 10px 0 10px;
+  padding: 0 10px;
+
   font-size: 12px;
   line-height: 12px;
   font-family: $ff-lato;
   color: $dark-contet;
+  text-transform: lowercase;
+
+  background: $color-background;
+
+  @media (min-width: $tablet-width) {
+    top: 67px;
+
+    font-size: 14px;
+    line-height: 14px;
+
+    background: $light;
+  }
+
+  @media (min-width: $desktop-width) {
+    background: $color-basic;
+  }
 }
 
 .example__definition {
-  font-size: 16px;
-  line-height: 16px;
+  display: block;
+  margin: 0;
+  padding-top: 15px;
+  padding-bottom: 18px;
+
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .example__prise {
   line-height: 20px;
+  text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 55px;
+
+    text-align: left;
+  }
+}
+
+.example__prise span {
+  @media (min-width: $desktop-width) {
+    margin-left: 55px;
+  }
 }
