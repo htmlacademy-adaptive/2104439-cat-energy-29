@@ -1,23 +1,11 @@
-/* const nav = document.querySelector('.nav');
-const navBtn = document.querySelector('.nav__toggle')
-
-if (navBtn) {
-  navBtn.addEventListener('click', () => {
-    nav.classList.toggle('nav--opened');
-  })
-} */
+if (document.querySelector('.no-js')) {
+  document.querySelector('.no-js').classList.remove('no-js');
+}
 
 let navMain = document.querySelector('.nav');
 let navToggle = document.querySelector('.nav__toggle');
 
-navMain.classList.remove('nav--nojs');
-
-navToggle.addEventListener('click', function () {
-  if (navMain.classList.contains('nav--closed')) {
-    navMain.classList.remove('nav--closed');
-    navMain.classList.add('nav--opened');
-  } else {
-    navMain.classList.add('nav--closed');
-    navMain.classList.remove('nav--opened');
-  }
+navToggle.addEventListener('click', function (evt) {
+  evt.preventDefault;
+  navMain.classList.toggle('nav--opened');
 });
