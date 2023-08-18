@@ -18,48 +18,23 @@
 
 .nav__toggle {
   position: absolute;
-  top: 21px;
+  top: 22px;
   right: 0;
   z-index: 2;
 
   display: block;
   width: 24px;
-  height: 24px;
+  height: 18px;
 
   background-color: transparent;
   border: none;
+  border-top: 2px solid $dark;
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
     display: none;
   }
-}
 
-.nav--closed .nav__toggle::before {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 0;
-
-  width: 24px;
-  height: 2px;
-
-  background-color: $dark;
-  box-shadow: 0 8px 0 0 $dark, 0 16px 0 0 $dark;
-
-  &:hover,
-  &:active {
-    opacity: 0.6;
-  }
-}
-
-.nav--closed .nav__item {
-  @media (max-width: $mobile-width-only) {
-    display: none;
-  }
-}
-
-.nav--opened .nav__toggle {
   &::before,
   &::after {
     content: "";
@@ -73,32 +48,34 @@
   }
 
   &::before {
-    box-shadow: none;
-    transform: rotate(45deg);
+    top: 6px;
   }
 
   &::after {
-    transform: rotate(-45deg);
-  }
-
-  &:active::before,
-  &:active::after {
-    background-color: fade($dark, 30%);
+    bottom: 0;
   }
 }
 
-.nav--nojs .nav__toggle {
+.nav--opened .nav__toggle {
+  border-top: 2px solid transparent;
+
+  &::before {
+    transform: rotate(-46deg);
+  }
+
+  &::after {
+    top: 6px;
+
+    transform: rotate(46deg);
+  }
+}
+
+.no-js .nav__toggle {
   display: none;
 }
 
-.nav--nojs .nav {
+.no-js .nav {
   position: static;
-
-  min-height: 0;
-}
-
-.nav--nojs .nav__item {
-  display: block;
 }
 
 .nav__list {
@@ -122,10 +99,15 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-end;
+    margin: 8px 4px 0 0;
 
     background-color: transparent;
 
-    gap: 33px;
+    gap: 34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 12px;
   }
 }
 
@@ -133,12 +115,20 @@
   display: flex;
 }
 
+.nav__item {
+  border-top: 1px solid $color-underline;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
+}
+
 .nav__link {
   position: relative;
 
   display: block;
+  padding: 21px 20px 24px;
   padding-top: 21px;
-  padding-bottom: 24px;
 
   font-size: 20px;
   line-height: 20px;
@@ -146,9 +136,9 @@
   text-transform: uppercase;
   text-decoration: none;
 
-  border-top: 1px solid $color-underline;
-
   @media (min-width: $tablet-width) {
+    padding: 10px 0;
+
     font-size: 18px;
     line-height: 24px;
 
@@ -156,45 +146,44 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding: 6px 0;
+
     font-size: 20px;
+    line-height: 30px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:focus-visible {
     opacity: 0.6;
   }
 
-  &:focus,
-  &:focus-visible {
+  &:active {
     opacity: 0.3;
   }
 }
 
 .nav__link--current {
-  &::before,
-  &:active {
-    @media (min-width: $tablet-width) {
-      content: "";
-      position: absolute;
-      right: 0;
-      bottom: 8px;
-      left: 0;
+  pointer-events: none;
+}
 
-      height: 2px;
+.nav__link--current::before {
+  @media (min-width: $tablet-width) {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
 
-      background-color: $color-main;
-    }
+    height: 2px;
 
-    @media (min-width: $desktop-width) {
-      bottom: 6px;
-    }
+    background-color: $color-main;
   }
 }
 
-.main-header--home .nav__link--current {
-  &::before {
-    @media (min-width: $desktop-width) {
-      background-color: $light;
-    }
+.main-header--home .nav__link--current::before {
+  @media (min-width: $desktop-width) {
+    background-color: $light;
   }
 }
 

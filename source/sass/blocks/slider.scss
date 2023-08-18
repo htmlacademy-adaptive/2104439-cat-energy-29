@@ -1,11 +1,62 @@
 .slider {
-  width: 280px;
+  position: relative;
+
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    max-width: 560px;
+  }
+}
+
+.slider__comparicon {
+  position: relative;
+
   height: 256px;
-  //Убрать overflow после стилизации слайдера
   overflow: hidden;
 
   @media (min-width: $tablet-width) {
-    width: 560px;
     height: 512px;
+    margin: 0 auto;
   }
+}
+
+.slider__img {
+  position: absolute;
+  top: 0;
+
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+
+  background-color: $color-underline;
+
+  @media (min-width: $tablet-width) {
+    background-color: transparent;
+  }
+}
+
+.slider__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.slider__img--before {
+  left: 0;
+  z-index: 20;
+}
+
+.slider__img--after {
+  right: 0;
+  z-index: 10;
+}
+
+.slider__img--before img {
+  object-position: left;
+}
+
+.slider__img--after img {
+  object-position: right;
 }

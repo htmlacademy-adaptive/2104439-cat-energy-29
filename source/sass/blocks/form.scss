@@ -19,14 +19,14 @@
   border: none;
 
   &--data {
-    padding: 0 20px 24px;
+    padding-bottom: 24px;
 
     @media (min-width: $tablet-width) {
-      padding: 0 70px 72px;
+      padding-bottom: 72px;
     }
 
     @media (min-width: $desktop-width) {
-      padding: 0 0 70px 0;
+      padding-bottom: 70px;
     }
   }
 
@@ -101,7 +101,7 @@
   }
 }
 
-.form__fieldset p {
+.form__fieldset--submit p {
   text-align: center;
 
   @media (min-width: $tablet-width) {
@@ -182,21 +182,36 @@
   }
 
   &:hover {
-    border: 1px solid $color-frame;
+    border-color: $color-frame;
   }
 
   &:focus,
   &:focus-visible {
-    border: 2px solid $dark-contet;
+    border-color: $dark-contet;
+    outline: none;
+    box-shadow: 0 0 0 1px $dark-contet;
   }
 
-  &:invalid {
-    border: 2px solid $error;
+  &--invalid {
+    border-color: $error;
+    box-shadow: 0 0 0 1px $error;
+  }
+
+  &--valid {
+    border-color: $color-main-dark;
+    box-shadow: 0 0 0 1px $color-main-dark;
+  }
+
+  &--disabled {
+    border-color: $color-frame;
+    box-shadow: 0 0 0 1px $color-frame;
   }
 }
 
 textarea.form__input {
   padding: 14px 14px;
+
+  resize: none;
 }
 
 .form__legend {

@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="body">
+<body class="body no-js">
   <div class="wrapper">
     <header class="main-header">
       <div class="main-header__container container">
@@ -17,8 +17,8 @@
           <a class="main-header__logo" href="index.html">
             <img src="img/svg/logo-mobile.svg" width="190" height="38" alt="Логотип компании Cat energy.">
           </a>
-          <button class="nav__toggle" type="button" aria-label="Открыть/закрыть меню.">
-            <span class="visually-hidden">Открыть меню</span>
+          <button class="nav__toggle" type="button">
+            <span class="visually-hidden">Открыть/закрыть меню.</span>
           </button>
           <ul class="nav__list list-reset">
             <li class="nav__item">
@@ -34,13 +34,14 @@
         </nav>
       </div>
 
-      <section class="intro intro__catalog">
+      <section class="intro intro--form">
 
         <div class="intro__container container">
-          <h1 class="intro__title page-title">Подбор программы</h1>
-          <p class="intro__content">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+          <div class="intro__content">
+            <h1 class="intro__title title">Подбор программы</h1>
+            <p>Заполните анкету, и мы подберем программу питания для вашего кота</p>
+          </div>
         </div>
-
       </section>
 
     </header>
@@ -71,16 +72,24 @@
               <h2 class="visually-hidden">Цель питания</h2>
               <ul class="control control--radio list-reset">
                 <li class="control__item">
-                  <input class="control__input control__input--radio" type="radio" name="group-weight" value="Похудение" id="slim" checked>
-                  <label class="control__label" for="slim">Похудение</label>
+                  <label class="control__label" for="slim">
+                    <input class="control__input control__input--radio" type="radio" name="group-weight" value="Похудение" id="slim" checked>
+                    <span class="control__label-text">Похудение</span>
+                  </label>
                 </li>
+
                 <li class="control__item">
-                  <input class="control__input control__input--radio" type="radio" name="group-weight" value="Набор массы" id="weight">
-                  <label class="control__label" for="weight">Набор массы</label>
+                  <label class="control__label" for="weight">
+                    <input class="control__input control__input--radio" type="radio" name="group-weight" value="Набор массы" id="weight">
+                    <span class="control__label-text">Набор массы</span>
+                  </label>
                 </li>
+
                 <li class="control__item">
-                  <input class=" control__input control__input--radio" type="radio" name="group-weight" value="Не знаю (нужен ваш совет)" id="advice">
-                  <label class="control__label" for="advice">Не знаю (нужен ваш совет)</label>
+                  <label class="control__label" for="advice">
+                    <input class=" control__input control__input--radio" type="radio" name="group-weight" value="Не знаю (нужен ваш совет)" id="advice">
+                    <span class="control__label-text">Не знаю (нужен ваш совет)</span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
@@ -122,20 +131,28 @@
             </h2>
             <ul class="control control--check list-reset">
               <li class="control__item">
-                <input class="control__input control__input--check" type="checkbox" name="sweetener" id="sweetener" checked>
-                <label class="control__label" for="sweetener">Сахарозаменитель</label>
+                <label class="control__label" for="sweetener">
+                  <input class="control__input control__input--check" type="checkbox" name="sweetener" id="sweetener" checked>
+                  <span class="control__label-text">Сахарозаменитель</span>
+                </label>
               </li>
               <li class="control__item">
-                <input class="control__input control__input--check" type="checkbox" name="water" id="water">
-                <label class="control__label" for="water">Питьевая вода</label>
+                <label class="control__label" for="water">
+                  <input class="control__input control__input--check" type="checkbox" name="water" id="water">
+                  <span class="control__label-text">Питьевая вода</span>
+                </label>
               </li>
               <li class="control__item">
-                <input class="control__input control__input--check" type="checkbox" name="milk" id="milk">
-                <label class="control__label" for="milk">Молоко</label>
+                <label class="control__label" for="milk">
+                  <input class="control__input control__input--check" type="checkbox" name="milk" id="milk">
+                  <span class="control__label-text">Молоко</span>
+                </label>
               </li>
               <li class="control__item">
-                <input class="control__input control__input--check" type="checkbox" name="vitamins" id="vitamins">
-                <label class="control__label" for="vitamins">Витамины</label>
+                <label class="control__label" for="vitamins">
+                  <input class="control__input control__input--check" type="checkbox" name="vitamins" id="vitamins">
+                  <span class="control__label-text">Витамины</span>
+                </label>
               </li>
             </ul>
           </fieldset>
@@ -159,7 +176,7 @@
           <h3 class="visually-hidden">Местонахождение.</h3>
 
           <div class="map__contact">
-            <p class="map__title">Приглашаем к сотрудничеству дилеров!</p>
+            <p class="map__title">Приглашаем&nbsp;к сотрудничеству дилеров!</p>
             <address class="map__adreess">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></address>
           </div>
 
@@ -250,6 +267,7 @@
 
     </footer>
   </div>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

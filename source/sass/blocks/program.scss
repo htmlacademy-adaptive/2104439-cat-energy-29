@@ -1,6 +1,16 @@
-.program__list {
-  position: relative;
+.program {
+  padding-top: 20px;
 
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 82px;
+  }
+}
+
+.program__list {
   @media (min-width: $desktop-width) {
     display: grid;
 
@@ -11,18 +21,26 @@
 
 .program__item {
   margin-bottom: 20px;
-  padding: 30px 33px 22px 20px;
+  padding: 20px;
 
   background-color: $color-basic;
   background-repeat: no-repeat;
 
   @media (min-width: $tablet-width) {
-    padding: 77px 316px 57px 52px;
+    margin-bottom: 30px;
+    padding: 67px 315px 58px 52px;
   }
 
   @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     margin: 0;
-    padding: 77px 61px 59px 52px;
+    padding: 67px 30px 60px 53px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -68,6 +86,7 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 25px;
     padding-left: 0;
 
     font-size: 36px;
@@ -75,13 +94,14 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-bottom: 55px;
     padding-left: 160px;
   }
 }
 
 .program__content {
-  margin: 0 0 23px;
-  padding: 0 0 23px;
+  margin: 0 0 19px;
+  padding-bottom: 21px;
 
   font-family: $ff-lato;
   color: $dark-contet;
@@ -89,16 +109,20 @@
   border-bottom: 1px solid $color-division;
 
   @media (min-width: $tablet-width) {
+    padding-bottom: 31px;
     font-size: 16px;
     line-height: 24px;
 
     border: none;
   }
+  @media (min-width: $desktop-width) {
+    padding-bottom: 8px;
+  }
 }
 
 .program__link {
   position: relative;
-
+  margin-top: auto;
   padding-right: 48px;
 
   font-size: 16px;
@@ -108,8 +132,9 @@
   text-decoration: none;
 
   @media (min-width: $tablet-width) {
+    padding-right: 57px;
     font-size: 20px;
-    line-height: normal;
+    line-height: 30px;
   }
 
   &::after {
@@ -120,12 +145,19 @@
 
     width: 32px;
     height: 10px;
-    margin-left: -5px;
 
     background-image: url("../img/svg/icon-arrow.svg");
+    background-repeat: no-repeat; //
+    background-position: left center; //
+    background-size: 32px 12px;
+  }
 
-    &:hover {
-      background-image: url("../img/svg/icon-arrow-hover.svg");
-    }
+  &:hover::after,
+  &:focus::after {
+    background-image: url("../img/svg/icon-arrow-hover.svg");
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
