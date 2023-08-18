@@ -1,7 +1,11 @@
 .example {
+  padding: 27px 0 23px;
+
   background-color: $color-background;
 
   @media (min-width: $tablet-width) {
+    padding: 43px 0 83px;
+
     background-image: linear-gradient(
       0deg,
       $color-background 42.5%,
@@ -10,6 +14,9 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding-top: 0;
+    padding-bottom: 74px;
+
     background-color: $color-basic;
     background-image: linear-gradient(0deg, $color-basic 77%, $light 77%);
   }
@@ -25,20 +32,47 @@
   }
 }
 
+.example__text-wrapper {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 84px;
+  }
+}
+
+.example__title {
+  margin-bottom: 38px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 63px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 145px;
+  }
+}
+
 .example__content {
-  padding-bottom: 26px;
+  margin: 0;
 
   font-family: $ff-lato;
   color: $dark-contet;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 34px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .example__list-wrapper {
+  padding: 20px 0;
+
   @media (min-width: $tablet-width) and (max-width: 1439px) {
     display: grid;
     align-items: center;
 
     gap: 33px;
-    grid-template-columns: repeat (2, auto);
+    grid-template-columns: repeat(2, auto);
   }
 
   @media (min-width: $desktop-width) {
@@ -48,31 +82,119 @@
 
 .example__list {
   display: grid;
+  margin: 0 0 30px;
 
   gap: 20px 32px;
   grid-template-columns: repeat(2, 124px);
 
   @media (min-width: $tablet-width) {
     align-items: center;
+    margin-bottom: 55px;
 
-    gap: 33px;
+    gap: 43px;
     grid-template-columns: repeat(2, 162px);
   }
 }
 
+.example__item {
+  position: relative;
+
+  min-height: 56px;
+
+  text-align: center;
+
+  border: 1px solid $color-frame;
+  border-radius: 3px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 72px;
+  }
+}
+
 .example__term {
+  position: absolute;
+  bottom: -13px;
+  left: 50%;
+
+  align-items: center;
+  padding: 0 17px;
+
   font-size: 12px;
   line-height: 12px;
   font-family: $ff-lato;
   color: $dark-contet;
+  text-transform: lowercase;
+
+  background-color: $color-background;
+  transform: translateX(-50%);
+
+  @media (min-width: $tablet-width) {
+    bottom: -7px;
+
+    width: max-content;
+    padding: 0 7px;
+
+    font-size: 14px;
+    line-height: 14px;
+
+    background-color: $light;
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: -6px;
+
+    background-color: $color-basic;
+  }
 }
 
 .example__definition {
-  font-size: 16px;
-  line-height: 16px;
+  display: block;
+  margin: 0;
+  padding-top: 15px;
+  padding-bottom: 18px;
+
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .example__prise {
+  margin: 0;
+
   line-height: 20px;
+  text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    max-width: 230px;
+    margin-top: 0;
+    margin-left: auto;
+
+    font-size: 20px;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 100%;
+
+    text-align: left;
+  }
+}
+
+.example__prise span {
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+    margin-top: 8px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    margin-left: 60px;
+  }
 }

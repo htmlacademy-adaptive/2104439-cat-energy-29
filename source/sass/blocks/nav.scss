@@ -17,16 +17,65 @@
 }
 
 .nav__toggle {
-  position: relative;
+  position: absolute;
+  top: 22px;
+  right: 0;
+  z-index: 2;
 
+  display: block;
   width: 24px;
-  height: 24px;
+  height: 18px;
 
-  background-color: $light;
+  background-color: transparent;
+  border: none;
+  border-top: 2px solid $dark;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     display: none;
   }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+
+    width: 24px;
+    height: 2px;
+
+    background-color: $dark;
+  }
+
+  &::before {
+    top: 6px;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+}
+
+.nav--opened .nav__toggle {
+  border-top: 2px solid transparent;
+
+  &::before {
+    transform: rotate(-46deg);
+  }
+
+  &::after {
+    top: 6px;
+
+    transform: rotate(46deg);
+  }
+}
+
+.no-js .nav__toggle {
+  display: none;
+}
+
+.no-js .nav {
+  position: static;
 }
 
 .nav__list {
@@ -34,10 +83,12 @@
   top: 100%;
   right: -20px;
   left: -20px;
-  z-index: 2;
+  z-index: 10;
 
   display: none;
   flex-direction: column;
+
+  text-align: center;
 
   background-color: $light;
 
@@ -48,29 +99,91 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-end;
+    margin: 8px 4px 0 0;
 
     background-color: transparent;
 
-    gap: 33px;
+    gap: 34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 12px;
   }
 }
 
-.nav.is-open .nav__list {
+.nav--opened .nav__list {
   display: flex;
 }
 
+.nav__item {
+  border-top: 1px solid $color-underline;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
+}
+
 .nav__link {
+  position: relative;
+
+  display: block;
+  padding: 21px 20px 24px;
+  padding-top: 21px;
+
+  font-size: 20px;
+  line-height: 20px;
   color: $dark;
   text-transform: uppercase;
   text-decoration: none;
 
   @media (min-width: $tablet-width) {
+    padding: 10px 0;
+
     font-size: 18px;
     line-height: 24px;
+
+    border: none;
   }
 
   @media (min-width: $desktop-width) {
+    padding: 6px 0;
+
     font-size: 20px;
+    line-height: 30px;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.nav__link--current {
+  pointer-events: none;
+}
+
+.nav__link--current::before {
+  @media (min-width: $tablet-width) {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 2px;
+
+    background-color: $color-main;
+  }
+}
+
+.main-header--home .nav__link--current::before {
+  @media (min-width: $desktop-width) {
+    background-color: $light;
   }
 }
 

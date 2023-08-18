@@ -9,9 +9,8 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="body">
+<body class="body no-js">
   <div class="wrapper">
-
     <header class="main-header">
       <div class="main-header__container container">
         <nav class="main-header__nav nav">
@@ -19,14 +18,14 @@
             <img src="img/svg/logo-mobile.svg" width="190" height="38" alt="Логотип компании Cat energy.">
           </a>
           <button class="nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
+            <span class="visually-hidden">Открыть/закрыть меню.</span>
           </button>
           <ul class="nav__list list-reset">
             <li class="nav__item">
               <a class="nav__link" href="index.html">Главная</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link nav__item--current" href="catalog.html" aria-current="page">Каталог продукции</a>
+              <a class="nav__link nav__link--current" href="catalog.html" aria-current="page">Каталог продукции</a>
             </li>
             <li class="nav__item">
               <a class="nav__link" href="form.html">Подбор программы</a>
@@ -35,9 +34,11 @@
         </nav>
       </div>
 
-      <section class="intro">
+      <section class="intro intro--catalog">
         <div class="intro__container container">
-          <h1 class="intro__title page-title">Каталог продукции</h1>
+          <div class="intro__content">
+            <h1 class="intro__title title">Каталог продукции</h1>
+          </div>
         </div>
 
       </section>
@@ -55,7 +56,7 @@
               <div class="catalog__item-container">
 
                 <a class="catalog__img" href="#">
-                  <img class="catalog__img" src="img/catalog/food-500-chicken-mobile@1.png" width="140" height="112" alt="Корм Cat Energy куриный 500 грамм в оранжевой банке.">
+                  <img src="img/catalog/food-500-chicken-mobile@1.png" width="140" height="112" alt="Корм Cat Energy куриный 500 грамм в оранжевой банке.">
                 </a>
 
                 <div class="catalog__descr">
@@ -89,7 +90,7 @@
               <div class="catalog__item-container">
 
                 <a class="catalog__img" href="#">
-                  <img class="catalog__img" src="img/catalog/food-1000-chicken-mobile@1.png" width="140" height="112" alt="Корм Cat Energy куриный 1000 грамм в оранжевой банке.">
+                  <img src="img/catalog/food-1000-chicken-mobile@1.png" width="140" height="112" alt="Корм Cat Energy куриный 1000 грамм в оранжевой банке.">
                 </a>
 
                 <div class="catalog__descr">
@@ -123,7 +124,7 @@
               <div class="catalog__item-container">
 
                 <a class="catalog__img" href="#">
-                  <img class="catalog__img" src="img/catalog/food-500-fish-mobile@1.png" width="140" height="112" alt="Корм Cat Energy рыбный 500 грамм в зелёной банке.">
+                  <img src="img/catalog/food-500-fish-mobile@1.png" width="140" height="112" alt="Корм Cat Energy рыбный 500 грамм в зелёной банке.">
                 </a>
 
                 <div class="catalog__descr">
@@ -157,7 +158,7 @@
               <div class="catalog__item-container">
 
                 <a class="catalog__img" href="#">
-                  <img class="catalog__img" src="img/catalog/food-1000-fish-mobile@1.png" width="140" height="112" alt="Корм Cat Energy рыбный 1000 грамм в зелёной банке.">
+                  <img src="img/catalog/food-1000-fish-mobile@1.png" width="140" height="112" alt="Корм Cat Energy рыбный 1000 грамм в зелёной банке.">
                 </a>
 
                 <div class="catalog__descr">
@@ -191,7 +192,7 @@
               <div class="catalog__item-container">
 
                 <a class="catalog__img" href="#">
-                  <img class="catalog__img" src="img/catalog/food-500-buckwheat-mobile@1.png" width="140" height="112" alt="Корм Cat Energy гречка 500 грамм в синей банке.">
+                  <img src="img/catalog/food-500-buckwheat-mobile@1.png" width="140" height="112" alt="Корм Cat Energy гречка 500 грамм в синей банке.">
                 </a>
 
                 <div class="catalog__descr">
@@ -225,7 +226,7 @@
               <div class="catalog__item-container">
 
                 <a class="catalog__img" href="#">
-                  <img class="catalog__img" src="img/catalog/food-1000-buckwheat-mobile@1.png" width="140" height="112" alt="Корм Cat Energy гречка 1000 грамм в синей банке.">
+                  <img src="img/catalog/food-1000-buckwheat-mobile@1.png" width="140" height="112" alt="Корм Cat Energy гречка 1000 грамм в синей банке.">
                 </a>
 
                 <div class="catalog__descr">
@@ -259,7 +260,7 @@
               <div class="catalog__item-container">
 
                 <a class="catalog__img" href="#">
-                  <img class="catalog__img" src="img/catalog/food-500-rice-mobile@1.png" width="140" height="112" alt="Корм Cat Energy рис 500 грамм в фиолетовой банке.">
+                  <img src="img/catalog/food-500-rice-mobile@1.png" width="140" height="112" alt="Корм Cat Energy рис 500 грамм в фиолетовой банке.">
                 </a>
 
                 <div class="catalog__descr">
@@ -291,7 +292,7 @@
             <li class="catalog__item catalog__item--more">
               <div class="catalog__item-container">
                 <h3 class="catalog__title">Показать еще 100500 товаров</h3>
-                <p class="catalog__description">На самом деле вкусов гораздо больше!</p>
+                <p>На самом деле вкусов гораздо больше!</p>
                 <a class="catalog__button button" href="#">Показать все</a>
               </div>
             </li>
@@ -354,7 +355,7 @@
           <h3 class="visually-hidden">Местонахождение.</h3>
 
           <div class="map__contact">
-            <p class="map__title">Приглашаем к сотрудничеству дилеров!</p>
+            <p class="map__title">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
             <address class="map__adreess">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></address>
           </div>
 
@@ -427,7 +428,7 @@
           </li>
         </ul>
 
-        <a class="main-footer-developer developer" href="https://htmlacademy.ru/">
+        <a class="main-footer__developer developer" href="https://htmlacademy.ru/">
           <span class="developer__name">HTML Academy</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="27" height="35" viewBox="0 0 27 35">
             <g clip-path="url(#a)">
@@ -446,6 +447,7 @@
     </footer>
 
   </div>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

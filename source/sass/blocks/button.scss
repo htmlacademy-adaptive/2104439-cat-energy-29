@@ -15,4 +15,20 @@
   background-color: $color-main;
   border: none;
   cursor: pointer;
+
+  &:hover {
+    background-color: $color-main-dark;
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: $color-main-dark;
+    opacity: 0.3;
+  }
+
+  &:disabled,
+  &--disabled {
+    background-color: $color-main;
+    opacity: 0.3;
+  }
 }

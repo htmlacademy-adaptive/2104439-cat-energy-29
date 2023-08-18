@@ -1,25 +1,79 @@
-.intro__container {
+.intro {
   position: relative;
 
+  padding: 27px 0 40px;
+
   @media (max-width: $mobile-width-only) {
-    padding: 0 0 30px;
+    border-top: 1px solid $color-division;
+  }
+}
+
+.intro--home {
+  @media (max-width: $mobile-width-only) {
+    padding: 0 0 43px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 0;
   }
 }
 
 .intro--home .intro__container {
+  @media (max-width: $mobile-width-only) {
+    padding: 0;
+  }
+
   @media (min-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 53px;
+  }
+}
+
+.intro__title {
+  @media (max-width: $mobile-width-only) {
+    line-height: 36px;
+  }
+}
+
+.intro--home .intro__title {
+  margin-bottom: 24px;
+
+  @media (max-width: $mobile-width-only) {
+    color: $light;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.intro--form .intro__title {
+  margin-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 55px;
   }
 }
 
 .intro__content {
-  text-transform: uppercase;
+  @media (min-width: $tablet-width) {
+    padding: 22px 20px 5px 40px;
+
+    font-size: 20px;
+    line-height: 30px;
+    text-align: left;
+    color: $dark;
+  }
+}
+
+.intro--catalog .intro__content {
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+  }
 }
 
 .intro--home .intro__content {
-  padding: 27px 20px 150px;
+  padding: 27px 20px 164px;
 
   text-align: center;
   color: $light;
@@ -36,6 +90,8 @@
   background-size: auto, cover;
 
   @media (min-width: $tablet-width) {
+    padding: 23px 20px 10px 90px;
+
     text-align: left;
     color: $dark;
 
@@ -44,14 +100,36 @@
 }
 
 .intro__text {
+  margin: 0;
+
   line-height: 14px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 50px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.intro--form .intro__text {
+  max-width: 270px;
+
+  line-height: 18px;
+
+  @media (min-width: 768px) {
+    max-width: 390px;
+    margin-bottom: 20px;
+
+    line-height: 30px;
+  }
 }
 
 .intro__img {
   width: 280px;
   height: 270px;
-  /* margin: -130px auto 0; */
-  margin: 0 auto;
+  margin: -135px auto 0;
 
   @media (min-width: $tablet-width) {
     position: relative;
@@ -60,6 +138,7 @@
     width: 100%;
     max-width: 709px;
     height: 609px;
+    margin-top: -93px;
   }
 
   @media (min-width: $desktop-width) {
@@ -67,6 +146,7 @@
 
     width: 552px;
     height: 499px;
+    margin: 11px 0 0 -127px;
   }
 }
 
@@ -94,7 +174,6 @@
 
   @media (min-width: $tablet-width) {
     position: static;
-    /*  left: auto; */
 
     width: 244px;
     margin-left: 0;
