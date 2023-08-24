@@ -20,4 +20,16 @@
   color: $color-icon;
 
   fill: currentColor;
+
+  &:hover .social__link-icons,
+  &:focus .social__link-icons,
+  &:focus-visible .social__link-icons {
+    fill: $color-main;
+  }
+
+  &:active .social__link-icons {
+    opacity: 0.3;
+
+    fill: $color-main;
+  }
 }

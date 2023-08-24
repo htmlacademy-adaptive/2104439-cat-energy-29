@@ -29,6 +29,16 @@
   @media (min-width: $tablet-width) {
     margin: 0;
   }
+
+  &:hover .main-footer__logo-icon,
+  &:focus .main-footer__logo-icon,
+  &:focus-visible .main-footer__logo-icon {
+    fill: $color-logo-hover;
+  }
+
+  &:active .main-footer__logo-icon {
+    fill: $color-logo-active;
+  }
 }
 
 .main-footer__logo-link svg {
