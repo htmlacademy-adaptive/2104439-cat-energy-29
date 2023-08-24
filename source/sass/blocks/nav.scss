@@ -7,11 +7,15 @@
   grid-template-columns: repeat(2, auto);
 
   @media (min-width: $tablet-width) {
+    padding: 24px 0 17px;
+
     gap: 20px;
     grid-template-columns: auto 1fr;
   }
 
   @media (min-width: $desktop-width) {
+    padding: 55px 0 20px;
+
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -99,7 +103,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-end;
-    margin: 8px 4px 0 0;
+    margin: 4px 4px 0 0;
 
     background-color: transparent;
 
@@ -107,6 +111,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin: 0;
     padding-top: 12px;
   }
 }
@@ -178,6 +183,10 @@
     height: 2px;
 
     background-color: $color-main;
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: -2px;
   }
 }
 

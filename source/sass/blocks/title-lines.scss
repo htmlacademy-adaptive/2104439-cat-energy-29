@@ -6,7 +6,7 @@
 
   font-weight: 400;
   font-size: 24px;
-  line-height: 30px;
+  line-height: 26px;
   font-family: $ff-oswald;
 
   @media (min-width: $tablet-width) {
@@ -37,7 +37,7 @@
     background-color: $color-main;
 
     @media (min-width: $tablet-width) {
-      top: 25px;
+      top: 32px;
     }
   }
 
@@ -57,12 +57,13 @@
 
 .title-lines span {
   display: inline-block;
-  max-width: 223px;
-  padding: 0 17px;
+  max-width: 222px;
+  padding: 0 20px;
 
   vertical-align: middle;
 
   @media (min-width: $tablet-width) {
+    max-width: 100%;
     padding: 0 37px;
   }
 }

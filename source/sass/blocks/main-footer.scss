@@ -3,20 +3,18 @@
 }
 
 .main-footer__container {
-  padding: 40px 0;
+  padding: 40px 20px;
 
   @media (min-width: $tablet-width) {
     display: grid;
     align-items: center;
-    padding-top: 57px;
-    padding-bottom: 55px;
+    padding: 57px 30px 55px;
 
     grid-template-columns: 1fr 140px 1fr;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 67px;
-    padding-bottom: 65px;
+    padding: 67px 0 65px;
   }
 }
 

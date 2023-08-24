@@ -10,6 +10,7 @@
 }
 
 .form__fieldset {
+  align-items: baseline;
   width: 100%;
   min-width: 320px;
   max-width: 1220px;
@@ -18,68 +19,77 @@
 
   border: none;
 
+  @media (min-width: $tablet-width) {
+    padding: 0 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
+  }
+
   &--data {
     padding-bottom: 24px;
 
     @media (min-width: $tablet-width) {
+      padding-top: 16px;
       padding-bottom: 72px;
     }
 
     @media (min-width: $desktop-width) {
-      padding-bottom: 70px;
+      padding: 0 0 53px;
     }
   }
 
   &--radio {
-    padding: 28px 20px 19px;
+    padding: 21px 20px 19px;
 
     border-top: 1px solid $color-division;
     border-bottom: 1px solid $color-division;
 
     @media (min-width: $tablet-width) {
-      padding: 0 70px 65px;
+      padding: 0 70px 52px;
 
       border: none;
     }
 
     @media (min-width: $desktop-width) {
-      padding: 0 0 70px;
+      padding: 0 0 53px;
     }
   }
 
   &--contacts {
-    padding: 0 20px 24px;
+    padding: 27px 20px 20px;
 
     @media (min-width: $tablet-width) {
-      padding: 0 70px 65px;
+      padding: 0 70px 49px;
     }
 
     @media (min-width: $desktop-width) {
-      padding: 0 0 70px;
+      padding: 0 0 56px;
     }
   }
 
   &--commit {
-    padding: 0 20px 23px;
+    padding-bottom: 18px;
 
     @media (min-width: $tablet-width) {
-      padding: 0 70px 65px;
+      padding: 0 70px 49px;
     }
 
     @media (min-width: $desktop-width) {
-      padding: 0 0 70px;
+      padding: 0 0 56px;
     }
   }
 
   &--check {
-    padding: 0 20px 34px;
+    padding-bottom: 34px;
 
     @media (min-width: $tablet-width) {
-      padding: 0 70px 65px;
+      padding-bottom: 54px;
     }
 
     @media (min-width: $desktop-width) {
-      padding: 0 0 74px;
+      padding: 0 0 63px;
     }
   }
 
@@ -89,15 +99,29 @@
     @media (min-width: $tablet-width) {
       display: grid;
       align-items: center;
-      padding: 0 70px 60px;
+      padding: 0 70px 61px;
 
-      gap: 20px 65px;
+      gap: 0 65px;
       grid-template-columns: repeat(2, 1fr);
     }
 
     @media (min-width: $desktop-width) {
       padding: 0 0 80px;
     }
+  }
+}
+
+.form__fieldset--commit .form__legend {
+  margin-bottom: 37px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
+  }
+}
+
+.form__fieldset--check .form__legend {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 50px;
   }
 }
 
@@ -115,10 +139,15 @@
 
   gap: 14px;
   grid-template-columns: 1fr;
+
+  @media (min-width: $tablet-width) {
+    gap: 20px;
+  }
 }
 
 .form__group-item {
   display: grid;
+  align-items: baseline;
 
   grid-template-columns: auto 1fr;
 }
@@ -150,7 +179,7 @@
 
 .form__input {
   width: 100%;
-  padding: 11px 20px;
+  padding: 13px 17px;
 
   font-weight: 400;
   font-size: 16px;
@@ -163,6 +192,8 @@
   border: 1px solid $color-border;
 
   @media (min-width: $tablet-width) {
+    padding: 11px 20px;
+
     font-size: 20px;
     line-height: normal;
   }
@@ -209,13 +240,45 @@
 }
 
 textarea.form__input {
+  height: 150px;
+  margin-top: 3px;
   padding: 14px 14px;
 
   resize: none;
+
+  @media (min-width: $tablet-width) {
+    height: 175px;
+    margin-top: 12px;
+    padding: 11px 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+  }
 }
 
 .form__legend {
   margin-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    margin: 3px -67px 70px -70px;
+    padding-left: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 3px -100px 70px -110px;
+    padding-left: 70px;
+  }
+}
+
+.form__legend span {
+  display: inline-block;
+  max-width: 222px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 100%;
+    padding: 0 40px;
+  }
 }
 
 .form__submit {
@@ -224,5 +287,34 @@ textarea.form__input {
 
   @media (min-width: $desktop-width) {
     min-width: 570px;
+  }
+}
+
+.form__fieldset--submit .button {
+  margin-bottom: 17px;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 16px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.form__fieldset--submit p {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 16px;
+  font-family: $ff-lato;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+    text-align: left;
   }
 }

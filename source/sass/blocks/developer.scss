@@ -1,4 +1,6 @@
 .developer {
+  align-items: center;
+
   text-decoration: none;
 }
 
@@ -7,4 +9,8 @@
   line-height: 18px;
   font-family: $ff-lato;
   color: $dark-contet;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 23px;
+  }
 }
