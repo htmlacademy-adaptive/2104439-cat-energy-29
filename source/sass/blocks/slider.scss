@@ -60,3 +60,58 @@
 .slider__img--after img {
   object-position: right;
 }
+
+.slider__change {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  z-index: 50;
+
+  width: 4px;
+
+  background-color: $color-icon;
+  border-radius: 2px;
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    color: $color-main;
+  }
+
+  &:active {
+    color: $color-main-dark;
+
+    opacity: 0.6;
+  }
+}
+
+.slider__change-pin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 40px;
+  height: 40px;
+
+  color: $color-icon;
+
+  background: $light;
+  border: 2px solid $color-icon;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    fill: $color-main;
+  }
+
+  &:active {
+    opacity: 0.6;
+
+    fill: $color-main-dark;
+  }
+}
