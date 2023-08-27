@@ -13,4 +13,30 @@
   @media (min-width: $tablet-width) {
     padding-right: 23px;
   }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    color: $color-main;
+  }
+
+  &:active {
+    color: $color-main;
+
+    opacity: 0.3;
+  }
+}
+
+.developer__logo {
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    fill: $color-main;
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    fill: $color-main;
+  }
 }
