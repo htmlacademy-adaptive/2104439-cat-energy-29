@@ -1,42 +1,29 @@
 .developer {
   align-items: center;
 
-  text-decoration: none;
-}
-
-.developer__name {
   font-size: 16px;
   line-height: 18px;
   font-family: $ff-lato;
   color: $dark-contet;
-
-  @media (min-width: $tablet-width) {
-    padding-right: 23px;
-  }
+  text-decoration: none;
 
   &:hover,
   &:focus,
   &:focus-visible {
-    color: $color-main;
+    outline: none;
+
+    fill: $color-main;
   }
 
   &:active {
-    color: $color-main;
-
     opacity: 0.3;
+
+    fill: $color-main;
   }
 }
 
-.developer__logo {
-  &:hover,
-  &:focus,
-  &:focus-visible {
-    fill: $color-main;
-  }
-
-  &:active {
-    opacity: 0.3;
-
-    fill: $color-main;
+.developer__name {
+  @media (min-width: $tablet-width) {
+    padding-right: 23px;
   }
 }

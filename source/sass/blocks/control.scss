@@ -1,7 +1,7 @@
 .control {
   display: grid;
 
-  gap: 12px;
+  gap: 13px;
   grid-template-columns: 1fr;
 
   &--radio {
@@ -9,6 +9,10 @@
       padding: 23px 27px 28px;
 
       border: 1px solid $color-border;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-bottom: 25px;
     }
   }
 
@@ -76,6 +80,11 @@
     background-color: $color-main;
     border-radius: 50%;
     transform: translate(-50%, -50%);
+
+    @media (min-width: $tablet-width) {
+      width: 18px;
+      height: 18px;
+    }
   }
 
   &:hover,

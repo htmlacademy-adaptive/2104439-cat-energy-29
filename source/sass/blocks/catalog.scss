@@ -8,12 +8,12 @@
   @media (min-width: $tablet-width) {
     display: grid;
 
-    gap: 64px 60px;
+    gap: 60px 60px;
     grid-template-columns: repeat(2, 1fr);
   }
 
   @media (min-width: $desktop-width) {
-    gap: 63px 80px;
+    gap: 65px 80px;
     grid-template-columns: repeat(4, 1fr);
   }
 }
@@ -51,7 +51,7 @@
     background-color: $color-basic;
     background-image: linear-gradient(0deg, $color-basic 84%, $light 84%);
 
-    gap: 31px 0;
+    gap: 22px 0;
     grid-template-columns: 1fr;
   }
 
@@ -67,7 +67,7 @@
 
   @media (min-width: $tablet-width) {
     width: 168px;
-    height: 200px;
+    height: 212px;
     margin: 0 auto;
   }
 
@@ -75,12 +75,28 @@
     width: 169px;
     height: 210px;
   }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .catalog__img img {
   display: block;
   width: 100%;
   height: 100%;
+}
+
+.catalog__descr {
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    padding-bottom: 10px;
+  }
 }
 
 .catalog__title-link {
@@ -93,6 +109,21 @@
   @media (min-width: $tablet-width) {
     max-width: 155px;
     margin: 0 auto;
+    padding-bottom: 13px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 16px;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    color: $color-main;
+  }
+
+  &:active {
+    color: rgb(104, 183, 56, 0.3);
   }
 }
 
@@ -108,15 +139,10 @@
   @media (min-width: $tablet-width) {
     max-width: 155px;
     margin: 0 auto;
-    padding-bottom: 13px;
 
     font-size: 20px;
     line-height: 24px;
     text-align: center;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-bottom: 16px;
   }
 }
 
@@ -152,13 +178,13 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 7px 0 6px;
+    padding: 7px 0 5px;
   }
 }
 
 .catalog__description-item:last-child {
   @media (min-width: $desktop-width) {
-    padding: 7px 0 8px;
+    padding: 6px 0 9px;
   }
 }
 
@@ -275,6 +301,14 @@
 
   &:active {
     background-color: $color-catalog-div;
-    opacity: 0.3;
+  }
+
+  &:disabled,
+  &--disabled {
+    color: rgb(68, 68, 68, 0.4);
+
+    background-color: rgb(242, 242, 242, 0.6);
+
+    pointer-events: none;
   }
 }

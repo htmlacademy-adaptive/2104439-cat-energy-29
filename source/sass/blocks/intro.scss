@@ -22,6 +22,16 @@
   }
 }
 
+.intro--form {
+  @media (max-width: $mobile-width-only) {
+    padding-bottom: 39px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 44px;
+  }
+}
+
 .intro--home .intro__container {
   @media (max-width: $mobile-width-only) {
     padding: 0;
@@ -52,14 +62,14 @@
 }
 
 .intro--form .intro__title {
-  margin-bottom: 36px;
+  margin-bottom: 38px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 55px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 7px;
+    margin-top: 4px;
   }
 }
 

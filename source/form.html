@@ -9,12 +9,12 @@
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
-
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="body no-js">
   <div class="wrapper">
+
     <header class="main-header">
       <div class="main-header__container container">
         <nav class="main-header__nav nav">
@@ -41,9 +41,7 @@
           </ul>
         </nav>
       </div>
-
       <section class="intro intro--form">
-
         <div class="intro__container container">
           <div class="intro__content">
             <h1 class="intro__title title">Подбор программы</h1>
@@ -51,7 +49,6 @@
           </div>
         </div>
       </section>
-
     </header>
 
     <main class="main-content">
@@ -62,12 +59,12 @@
               <h2 class="visually-hidden">Данные кота.</h2>
               <div class="form__group">
                 <div class="form__group-item">
-                  <label class="form__label" for="form-name">Имя:<sup>*</sup></label>
-                  <input class="form__input" type="text" id="form-name" placeholder="Барсик">
+                  <label class="form__label" for="form-name">Имя: &#8432;</label>
+                  <input class="form__input" type="text" id="form-name" placeholder="Барсик" required>
                 </div>
                 <div class="form__group-item">
-                  <label class="form__label" for="form-weight">Вес (кг):<sup>*</sup></label>
-                  <input class="form__input" type="number" id="form-weight" placeholder="7">
+                  <label class="form__label" for="form-weight">Вес (кг): &#8432;</label>
+                  <input class="form__input" type="number" id="form-weight" placeholder="7" required>
                 </div>
                 <div class="form__group-item">
                   <label class="form__label" for="form-age">Возраст (лет):</label>
@@ -75,7 +72,6 @@
                 </div>
               </div>
             </fieldset>
-
             <fieldset class="form__fieldset form__fieldset--radio">
               <h2 class="visually-hidden">Цель питания</h2>
               <ul class="control control--radio list-reset">
@@ -85,14 +81,12 @@
                     <span class="control__label-text">Похудение</span>
                   </label>
                 </li>
-
                 <li class="control__item">
                   <label class="control__label" for="weight">
                     <input class="control__input control__input--radio" type="radio" name="group-weight" value="Набор массы" id="weight">
                     <span class="control__label-text">Набор массы</span>
                   </label>
                 </li>
-
                 <li class="control__item">
                   <label class="control__label" for="advice">
                     <input class=" control__input control__input--radio" type="radio" name="group-weight" value="Не знаю (нужен ваш совет)" id="advice">
@@ -106,25 +100,23 @@
             <h2 class="form__legend title-lines">
               <span>Контактные данные (владельца кота)</span>
             </h2>
-
             <div class="form__group">
               <div class="form__group-item">
-                <label class="form__label" for="form-email">E-mail:<sup>*</sup></label>
+                <label class="form__label" for="form-email">E-mail: &#8432;</label>
+                <!-- form__input-container--invalid показывает ошибку при валидации -->
+                <!-- form__input-container--valid показывает, что валидация прошла без ошибок -->
                 <span class="form__input-container form__input-container--mail">
-                  <input class="form__input form__input--mail" type="email" id="form-email" placeholder="kuklachev@gmail.com">
+                  <input class="form__input form__input--mail" type="email" id="form-email" placeholder="kuklachev@gmail.com" required>
                 </span>
               </div>
-
               <div class="form__group-item">
-                <label class="form__label" for="form-phone">Телефон:<sup>*</sup></label>
+                <label class="form__label" for="form-phone">Телефон: &#8432;</label>
                 <span class="form__input-container form__input-container--phone">
-                  <input class="form__input form__input--phone" type="tel" id="form-phone" placeholder="8 (960) 900-60-90">
+                  <input class="form__input form__input--phone" type="tel" id="form-phone" placeholder="8 (960) 900-60-90" required>
                 </span>
               </div>
-
             </div>
           </fieldset>
-
           <fieldset class="form__fieldset form__fieldset--commit">
             <h2 class="form__legend title-lines">
               <span>Комментарий</span>
@@ -132,7 +124,6 @@
             <label class="visually-hidden" for="commit">Комментарий</label>
             <textarea class="form__input" name="commit" id="commit" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
-
           <fieldset class="form__fieldset form__fieldset--check">
             <h2 class="form__legend title-lines">
               <span>Дополнительно</span>
@@ -140,60 +131,55 @@
             <ul class="control control--check list-reset">
               <li class="control__item">
                 <label class="control__label" for="sweetener">
-                  <input class="control__input control__input--check" type="checkbox" name="sweetener" id="sweetener" checked>
+                  <input class="control__input control__input--check" type="checkbox" name="sweetener" value="Сахарозаменитель" id="sweetener" checked>
                   <span class="control__label-text">Сахарозаменитель</span>
                 </label>
               </li>
               <li class="control__item">
                 <label class="control__label" for="water">
-                  <input class="control__input control__input--check" type="checkbox" name="water" id="water">
+                  <input class="control__input control__input--check" type="checkbox" name="water" value="Питьевая вода" id="water">
                   <span class="control__label-text">Питьевая вода</span>
                 </label>
               </li>
               <li class="control__item">
                 <label class="control__label" for="milk">
-                  <input class="control__input control__input--check" type="checkbox" name="milk" id="milk">
+                  <input class="control__input control__input--check" type="checkbox" name="milk" value="Молоко" id="milk">
                   <span class="control__label-text">Молоко</span>
                 </label>
               </li>
               <li class="control__item">
                 <label class="control__label" for="vitamins">
-                  <input class="control__input control__input--check" type="checkbox" name="vitamins" id="vitamins">
+                  <input class="control__input control__input--check" type="checkbox" name="vitamins" value="Витамины" id="vitamins">
                   <span class="control__label-text">Витамины</span>
                 </label>
               </li>
             </ul>
           </fieldset>
-
           <div class="form__fieldset form__fieldset--submit">
             <button class="button form__submit" type="submit">Отправить заявку</button>
-            <p><sup>*</sup>— Обязательные поля</p>
+            <p>&#8432; — Обязательные поля</p>
           </div>
-
         </form>
-
       </section>
-
     </main>
 
     <footer class="main-footer">
       <h2 class="visually-hidden">Контакты</h2>
-
       <section class="main-footer__map map">
         <div class="map__container container">
           <h3 class="visually-hidden">Местонахождение.</h3>
-
           <div class="map__contact">
             <p class="map__title">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
             <address class="map__adreess">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></address>
           </div>
-
         </div>
-
         <div class="map__iframe-container">
           <noscript>
             <a class="map__img" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/map/map-desktop@1.webp 1x, img/map/map-desktop@2.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/map/map-tablet@1.webp 1x, img/map/map-tablet@2.webp 2x">
+                <source type="image/webp" srcset="img/map/map-mobile@1.webp 1x, img/map/map-mobile@2.webp 2x">
                 <source media="(min-width: 1440px)" srcset="img/map/map-desktop@1.png 1x, img/map/map-desktop@2.png 2x">
                 <source media="(min-width: 768px)" srcset="img/map/map-tablet@1.png 1x, img/map/map-tablet@2.png 2x">
                 <img src="img/map/map-mobile@1.png" srcset="img/map/map-mobile@2.png 2x" width="320" height="362" alt="Карта местонахождения магазина по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19/8.">
@@ -203,20 +189,15 @@
           <div class="map__iframe">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625719752!2d30.320472476280557!3d59.938719162094664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2skg!4v1690904611358!5m2!1sru!2skg" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
-
         </div>
-
       </section>
-
       <section class="main-footer__container container">
-
+        <h3 class="visually-hidden">Мы в соцсетях</h3>
         <a class="main-footer__logo-link" href="index.html">
           <svg class="main-footer__logo-icon" width="128" height="25">
-            <use href="img/sprite.svg#logo-footer"></use>
+            <use href="img/sprite.svg#footer-logo"></use>
           </svg>
-
         </a>
-
         <ul class="main-footer__social social list-reset">
           <li class="social__item">
             <a class="social__link" href="https://vk.com/htmlacademy">
@@ -243,8 +224,7 @@
             </a>
           </li>
         </ul>
-
-        <a class="main-footer__developer developer" href="https://htmlacademy.ru/">
+        <a class="main-footer__developer developer" href="https://htmlacademy.ru/" aria-label="Сайт HTML Academy">
           <span class="developer__name">HTML Academy</span>
           <svg class="developer__logo" width="27" height="35">
             <use href="img/sprite.svg#htmlacademy"></use>
@@ -252,8 +232,8 @@
           <span class="visually-hidden">Сайт разработчика.</span>
         </a>
       </section>
-
     </footer>
+
   </div>
   <script src="js/script.js"></script>
 </body>

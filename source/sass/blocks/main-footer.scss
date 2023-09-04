@@ -26,17 +26,21 @@
 
   color: $color-logo;
 
+  fill: $color-logo;
+
   @media (min-width: $tablet-width) {
     margin: 0;
   }
 
-  &:hover .main-footer__logo-icon,
-  &:focus .main-footer__logo-icon,
-  &:focus-visible .main-footer__logo-icon {
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    outline: none;
+
     fill: $color-logo-hover;
   }
 
-  &:active .main-footer__logo-icon {
+  &:active {
     fill: $color-logo-active;
   }
 }
@@ -45,8 +49,6 @@
   display: block;
   width: 100%;
   height: 100%;
-
-  fill: currentColor;
 }
 
 .main-footer__social {

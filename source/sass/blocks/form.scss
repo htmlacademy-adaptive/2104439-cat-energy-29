@@ -28,10 +28,10 @@
   }
 
   &--data {
-    padding-bottom: 24px;
+    padding-bottom: 23px;
 
     @media (min-width: $tablet-width) {
-      padding-top: 16px;
+      padding-top: 20px;
       padding-bottom: 72px;
     }
 
@@ -47,7 +47,7 @@
     border-bottom: 1px solid $color-division;
 
     @media (min-width: $tablet-width) {
-      padding: 0 70px 52px;
+      padding: 0 70px 49px;
 
       border: none;
     }
@@ -58,10 +58,10 @@
   }
 
   &--contacts {
-    padding: 27px 20px 20px;
+    padding: 27px 20px 22px;
 
     @media (min-width: $tablet-width) {
-      padding: 0 70px 49px;
+      padding: 0 70px 52px;
     }
 
     @media (min-width: $desktop-width) {
@@ -82,14 +82,14 @@
   }
 
   &--check {
-    padding-bottom: 34px;
+    padding-bottom: 32px;
 
     @media (min-width: $tablet-width) {
-      padding-bottom: 54px;
+      padding-bottom: 52px;
     }
 
     @media (min-width: $desktop-width) {
-      padding: 0 0 63px;
+      padding: 0 0 59px;
     }
   }
 
@@ -101,18 +101,20 @@
       align-items: center;
       padding: 0 70px 61px;
 
-      gap: 0 65px;
+      gap: 0 61px;
       grid-template-columns: repeat(2, 1fr);
     }
 
     @media (min-width: $desktop-width) {
       padding: 0 0 80px;
+
+      gap: 0 81px;
     }
   }
 }
 
 .form__fieldset--commit .form__legend {
-  margin-bottom: 37px;
+  margin-bottom: 32px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 70px;
@@ -123,14 +125,9 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 50px;
   }
-}
 
-p .form__fieldset--submit {
-  text-align: center;
-
-  @media (min-width: $tablet-width) {
-    font-size: 16px;
-    line-height: 16px;
+  @media (min-width: $desktop-width) {
+    margin-bottom: 53px;
   }
 }
 
@@ -148,14 +145,17 @@ p .form__fieldset--submit {
 .form__group-item {
   display: grid;
   align-items: baseline;
+  min-height: 30px;
 
   grid-template-columns: auto 1fr;
+
+  @media (min-width: $tablet-width) {
+    min-height: 40px;
+  }
 }
 
 .form__fieldset--contacts .form__group {
   @media (min-width: $desktop-width) {
-    display: grid;
-
     gap: 20px 80px;
     grid-template-columns: repeat(2, 1fr);
   }
@@ -163,7 +163,7 @@ p .form__fieldset--submit {
 
 .form__label {
   align-self: center;
-  padding-right: 13px;
+  padding-right: 15px;
 
   font-size: 16px;
   line-height: 18px;
@@ -177,9 +177,56 @@ p .form__fieldset--submit {
   }
 }
 
+.form__input-container {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 2;
+
+    width: 40px;
+    height: 20px;
+
+    background-color: $dark;
+    transform: translateY(-50%);
+
+    mask-position: right 12px center;
+    mask-repeat: no-repeat;
+    mask-size: 20px 20px;
+
+    @media (min-width: $desktop-width) {
+      right: 4px;
+    }
+  }
+
+  &--mail::after {
+    mask-image: url("../img/svg/input-email.svg");
+  }
+
+  &--phone::after {
+    mask-image: url("../img/svg/input-phone.svg");
+  }
+
+  &--invalid::after {
+    background-color: $error;
+  }
+
+  &:hover::after {
+    background-color: $color-title-catalog;
+  }
+
+  &:focus-within::after {
+    background-color: $color-main;
+  }
+}
+
 .form__input {
   width: 100%;
-  padding: 13px 17px;
+  height: 45px;
+  padding: 9px 14px;
 
   font-weight: 400;
   font-size: 16px;
@@ -192,6 +239,7 @@ p .form__fieldset--submit {
   border: 1px solid $color-border;
 
   @media (min-width: $tablet-width) {
+    height: 52px;
     padding: 11px 20px;
 
     font-size: 20px;
@@ -199,17 +247,11 @@ p .form__fieldset--submit {
   }
 
   &--mail {
-    background-image: url("../img/svg/input-email.svg");
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    background-size: 20px;
+    padding-right: 40px;
   }
 
   &--phone {
-    background-image: url("../img/svg/input-phone.svg");
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    background-size: 20px;
+    padding-right: 40px;
   }
 
   &:hover {
@@ -233,9 +275,18 @@ p .form__fieldset--submit {
     box-shadow: 0 0 0 1px $color-main-dark;
   }
 
-  &--disabled {
+  &:disabled {
     border-color: $color-frame;
     box-shadow: 0 0 0 1px $color-frame;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
+
+  &[type="number"] {
+    appearance: textfield;
   }
 }
 
@@ -266,7 +317,7 @@ textarea.form__input {
   }
 
   @media (min-width: $desktop-width) {
-    margin: 3px -100px 70px -110px;
+    margin: 3px -100px 73px -110px;
     padding-left: 70px;
   }
 }
@@ -291,12 +342,13 @@ textarea.form__input {
 }
 
 .form__fieldset--submit .button {
-  margin-bottom: 17px;
+  margin-bottom: 22px;
 
   font-size: 16px;
   line-height: 20px;
 
   @media (min-width: $tablet-width) {
+    min-height: 54px;
     margin: 0;
     padding: 16px;
 
@@ -308,9 +360,9 @@ textarea.form__input {
 .form__fieldset--submit p {
   margin: 0;
 
-  font-size: 14px;
   line-height: 16px;
   font-family: $ff-lato;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;

@@ -25,6 +25,7 @@
 .slider__img {
   position: absolute;
   top: 0;
+  left: 0;
 
   width: 50%;
   height: 100%;
@@ -44,12 +45,12 @@
 }
 
 .slider__img--before {
-  left: 0;
   z-index: 20;
 }
 
 .slider__img--after {
   right: 0;
+  left: auto;
   z-index: 10;
 }
 
@@ -62,7 +63,6 @@
 }
 
 .slider__change {
-  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
@@ -71,18 +71,23 @@
 
   width: 4px;
 
+  color: $color-icon;
+
   background-color: $color-icon;
   border-radius: 2px;
+  transform: translateX(-50%);
 
   &:hover,
-  &:focus,
-  &:focus-visible {
+  &:focus-within {
     color: $color-main;
+
+    background-color: $color-main;
   }
 
   &:active {
     color: $color-main-dark;
 
+    background-color: $color-main-dark;
     opacity: 0.6;
   }
 }
@@ -92,26 +97,30 @@
   top: 50%;
   left: 50%;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
 
-  color: $color-icon;
+  color: currentColor;
 
   background: $light;
-  border: 2px solid $color-icon;
+  border: 2px solid currentColor;
   border-radius: 20px;
   transform: translate(-50%, -50%);
   cursor: pointer;
 
+  fill: currentColor;
+
   &:hover,
   &:focus,
   &:focus-visible {
-    fill: $color-main;
+    border-color: currentColor;
   }
 
   &:active {
+    border-color: currentColor;
     opacity: 0.6;
-
-    fill: $color-main-dark;
   }
 }
