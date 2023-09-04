@@ -279,6 +279,15 @@
     border-color: $color-frame;
     box-shadow: 0 0 0 1px $color-frame;
   }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
+
+  &[type="number"] {
+    appearance: textfield;
+  }
 }
 
 textarea.form__input {
