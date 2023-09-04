@@ -62,11 +62,11 @@
               <h2 class="visually-hidden">Данные кота.</h2>
               <div class="form__group">
                 <div class="form__group-item">
-                  <label class="form__label" for="form-name">Имя:<sup>*</sup></label>
+                  <label class="form__label" for="form-name">Имя: &#8432;</label>
                   <input class="form__input" type="text" id="form-name" placeholder="Барсик">
                 </div>
                 <div class="form__group-item">
-                  <label class="form__label" for="form-weight">Вес (кг):<sup>*</sup></label>
+                  <label class="form__label" for="form-weight">Вес (кг): &#8432;</label>
                   <input class="form__input" type="number" id="form-weight" placeholder="7">
                 </div>
                 <div class="form__group-item">
@@ -109,14 +109,16 @@
 
             <div class="form__group">
               <div class="form__group-item">
-                <label class="form__label" for="form-email">E-mail:<sup>*</sup></label>
+                <label class="form__label" for="form-email">E-mail: &#8432;</label>
+                <!-- form__input-container--invalid показывает ошибку при валидации -->
+                <!-- form__input-container--valid показывает, что валидация прошла без ошибок -->
                 <span class="form__input-container form__input-container--mail">
                   <input class="form__input form__input--mail" type="email" id="form-email" placeholder="kuklachev@gmail.com">
                 </span>
               </div>
 
               <div class="form__group-item">
-                <label class="form__label" for="form-phone">Телефон:<sup>*</sup></label>
+                <label class="form__label" for="form-phone">Телефон: &#8432;</label>
                 <span class="form__input-container form__input-container--phone">
                   <input class="form__input form__input--phone" type="tel" id="form-phone" placeholder="8 (960) 900-60-90">
                 </span>
@@ -167,7 +169,7 @@
 
           <div class="form__fieldset form__fieldset--submit">
             <button class="button form__submit" type="submit">Отправить заявку</button>
-            <p><sup>*</sup>— Обязательные поля</p>
+            <p>&#8432; — Обязательные поля</p>
           </div>
 
         </form>
@@ -194,6 +196,10 @@
           <noscript>
             <a class="map__img" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/map/map-desktop@1.webp 1x, img/map/map-desktop@2.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/map/map-tablet@1.webp 1x, img/map/map-tablet@2.webp 2x">
+                <source type="image/webp" srcset="img/map/map-mobile@1.webp 1x, img/map/map-mobile@2.webp 2x">
+
                 <source media="(min-width: 1440px)" srcset="img/map/map-desktop@1.png 1x, img/map/map-desktop@2.png 2x">
                 <source media="(min-width: 768px)" srcset="img/map/map-tablet@1.png 1x, img/map/map-tablet@2.png 2x">
                 <img src="img/map/map-mobile@1.png" srcset="img/map/map-mobile@2.png 2x" width="320" height="362" alt="Карта местонахождения магазина по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19/8.">
@@ -212,7 +218,7 @@
 
         <a class="main-footer__logo-link" href="index.html">
           <svg class="main-footer__logo-icon" width="128" height="25">
-            <use href="img/sprite.svg#logo-footer"></use>
+            <use href="img/sprite.svg#footer-logo"></use>
           </svg>
 
         </a>

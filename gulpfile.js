@@ -11,6 +11,7 @@ import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import del from 'del';
 import browser from 'browser-sync';
+import { stacksvg } from 'gulp-stacksvg';
 
 // Styles
 
@@ -57,7 +58,7 @@ const copyImages = () => {
 
 // WebP
 
-const createWebp = () => {
+export const createWebp = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
     .pipe(squoosh({
       webp: {}
@@ -72,15 +73,23 @@ export const svg = () =>
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 
+// export const sprite = () => {
+//  return gulp.src('source/img/sprite/*.svg')
+//    .pipe(svgo())
+//    .pipe(svgstore({
+//      inlineSvg: true
+//    }))
+//    .pipe(rename('sprite.svg'))
+//    .pipe(gulp.dest('build/img'));
+//}
+
 export const sprite = () => {
   return gulp.src('source/img/sprite/*.svg')
     .pipe(svgo())
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
+    .pipe(stacksvg())
     .pipe(rename('sprite.svg'))
     .pipe(gulp.dest('build/img'));
-}
+};
 
 // Copy
 

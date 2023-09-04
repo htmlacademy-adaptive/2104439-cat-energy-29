@@ -1,10 +1,10 @@
 .example {
-  padding: 26px 0 23px;
+  padding: 26px 0 41px;
 
   background-color: $color-background;
 
   @media (min-width: $tablet-width) {
-    padding: 43px 0 83px;
+    padding: 43px 0 101px;
 
     background-image: linear-gradient(
       0deg,
@@ -27,7 +27,7 @@
     display: grid;
     align-items: start;
 
-    gap: 10px 220px;
+    gap: 10px 227px;
     grid-template-columns: 433px 1fr;
   }
 }

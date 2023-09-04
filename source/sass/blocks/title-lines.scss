@@ -57,13 +57,13 @@
 
 .title-lines span {
   display: inline-block;
-  max-width: 222px;
+  max-width: 266px;
   padding: 0 20px;
 
   vertical-align: middle;
 
   @media (min-width: $tablet-width) {
     max-width: 100%;
-    padding: 0 37px;
+    padding: 0 40px;
   }
 }

@@ -16,19 +16,25 @@
   border: none;
   cursor: pointer;
 
-  &:hover {
-    background-color: $color-main-dark;
-  }
-
+  &:hover,
   &:focus,
   &:focus-visible {
     background-color: $color-main-dark;
-    opacity: 0.3;
+    outline: none;
+  }
+
+  &:active {
+    color: rgb(255, 255, 255, 0.3);
+
+    background-color: $color-main-dark;
   }
 
   &:disabled,
   &--disabled {
-    background-color: $color-main;
-    opacity: 0.3;
+    color: rgb(186, 186, 186, 0.6);
+
+    background-color: rgb(94, 170, 47, 0.1);
+
+    pointer-events: none;
   }
 }

@@ -24,6 +24,8 @@
   &:hover .social__link-icons,
   &:focus .social__link-icons,
   &:focus-visible .social__link-icons {
+    outline: none;
+
     fill: $color-main;
   }
 
