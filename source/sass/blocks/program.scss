@@ -159,10 +159,16 @@
     @media (min-width: $tablet-width) {
       top: 10px;
     }
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+    }
   }
 
   &:hover::after,
-  &:focus::after {
+  &:focus::after,
+  &:focus-visible::after {
     background-image: url("../img/svg/icon-arrow-hover.svg");
   }
 

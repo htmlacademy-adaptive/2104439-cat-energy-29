@@ -28,7 +28,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 44px;
+    padding-bottom: 43px;
   }
 }
 
@@ -211,7 +211,7 @@
 
 .intro__button {
   position: absolute;
-  bottom: -43px;
+  bottom: 0;
   left: 50%;
   z-index: 1;
 

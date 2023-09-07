@@ -87,6 +87,13 @@
     }
   }
 
+  &:focus,
+  &:focus-visible {
+    border-color: $dark-contet;
+    outline: none;
+    box-shadow: 0 0 0 1px $dark-contet;
+  }
+
   &:hover,
   &:active {
     border-color: $color-btn-hover;

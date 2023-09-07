@@ -31,11 +31,7 @@
   height: 100%;
   overflow: hidden;
 
-  background-color: $color-underline;
-
-  @media (min-width: $tablet-width) {
-    background-color: transparent;
-  }
+  background-color: transparent;
 }
 
 .slider__img img {
@@ -117,6 +113,7 @@
   &:focus,
   &:focus-visible {
     border-color: currentColor;
+    outline: none;
   }
 
   &:active {
