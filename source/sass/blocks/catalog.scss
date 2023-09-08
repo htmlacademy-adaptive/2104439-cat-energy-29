@@ -40,7 +40,7 @@
   display: grid;
   align-items: start;
   height: 100%;
-  padding: 20px 0 25px;
+  padding: 21px 0 24px;
 
   gap: 17px 0;
   grid-template-columns: 140px 1fr;
@@ -79,6 +79,7 @@
   &:hover,
   &:focus,
   &:focus-visible {
+    outline: none;
     opacity: 0.8;
   }
 
@@ -108,18 +109,19 @@
 
   @media (min-width: $tablet-width) {
     max-width: 155px;
-    margin: 0 auto;
-    padding-bottom: 13px;
+    margin: 0 auto 13px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 16px;
+    margin-bottom: 16px;
   }
 
   &:hover,
   &:focus,
   &:focus-visible {
     color: $color-main;
+
+    outline: none;
   }
 
   &:active {

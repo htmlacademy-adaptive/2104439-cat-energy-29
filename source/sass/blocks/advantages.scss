@@ -44,6 +44,9 @@
 .advantages__item {
   position: relative;
 
+  display: flex;
+  align-items: center;
+  min-height: 60px;
   margin-bottom: 18px;
   padding: 5px 0 3px 80px;
 
