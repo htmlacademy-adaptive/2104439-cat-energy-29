@@ -2,7 +2,7 @@
   position: relative;
 }
 
-.map--home .map__container {
+.map--home {
   background-color: $light;
 }
 
@@ -46,14 +46,20 @@
   }
 }
 
-.map__img img {
+.map__img {
+  display: block;
   width: 100%;
   height: 362px;
-  overflow: contain;
 
   @media (min-width: $tablet-width) {
     height: 400px;
   }
+}
+
+.map__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .map__adreess {
@@ -100,4 +106,8 @@
   height: 100%;
 
   border: none;
+}
+
+.no-js .map__iframe {
+  display: none;
 }
