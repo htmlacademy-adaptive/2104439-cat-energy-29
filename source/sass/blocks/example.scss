@@ -90,7 +90,7 @@
 
 .example__list {
   display: grid;
-  margin: 0 0 33px;
+  margin: 0 0 34px;
 
   gap: 20px 32px;
   grid-template-columns: repeat(2, 124px);
@@ -105,11 +105,12 @@
 }
 
 .example__item {
-  position: relative;
-
-  min-height: 56px;
-
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: start;
+  align-items: center;
   text-align: center;
+  text-transform: lowercase;
 
   border: 1px solid $color-frame;
   border-radius: 3px;
@@ -120,12 +121,12 @@
 }
 
 .example__term {
-  position: absolute;
-  bottom: -13px;
-  left: 50%;
+  z-index: 2;
 
-  align-items: center;
-  padding: 0 17px;
+  max-width: 85px;
+  margin-top: 7px;
+  margin-bottom: -16px;
+  padding: 0 5px;
 
   font-size: 12px;
   line-height: 12px;
@@ -134,12 +135,12 @@
   text-transform: lowercase;
 
   background-color: $color-background;
-  transform: translateX(-50%);
 
   @media (min-width: $tablet-width) {
     bottom: -7px;
 
-    width: max-content;
+    max-width: 139px;
+    margin-top: 9px;
     padding: 0 7px;
 
     font-size: 14px;
@@ -159,7 +160,7 @@
   display: block;
   margin: 0;
   padding-top: 13px;
-  padding-bottom: 17px;
+  padding-bottom: 2px;
 
   font-size: 24px;
   line-height: 24px;
@@ -167,6 +168,8 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
+    padding-top: 14px;
+
     font-size: 30px;
     line-height: 37px;
   }
